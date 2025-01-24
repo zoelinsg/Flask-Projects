@@ -1,0 +1,49 @@
+<!-- filepath: /c:/Users/zoe.lin/Desktop/web-projects/flask-projects/taiwan_air_check/src/templates/index.html -->
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>臺灣 AQI 前 20 名</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>臺灣 AQI 前 20 名</h1>
+        <p class="text-muted">資料總筆數: {{ records|length }}</p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>城市</th>
+                    <th>地點</th>
+                    <th>AQI</th>
+                    <th>狀態</th>
+                    <th>so2</th>
+                    <th>co</th>
+                    <th>o3</th>
+                    <th>no2</th>
+                    <th>nox</th>
+                    <th>no</th>
+                    <th>pm2.5</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for record in records %}
+                <tr>
+                    <td>{{ record.county }}</td>
+                    <td>{{ record.sitename }}</td>
+                    <td>{{ record.aqi }}</td>
+                    <td>{{ record.status }}</td>
+                    <td>{{ record.so2 }}</td>
+                    <td>{{ record.co }}</td>
+                    <td>{{ record.o3 }}</td>
+                    <td>{{ record.no2 }}</td>
+                    <td>{{ record.nox }}</td>
+                    <td>{{ record.no }}</td>
+                    <td>{{ record['pm2.5'] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
