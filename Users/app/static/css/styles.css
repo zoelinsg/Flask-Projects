@@ -1,0 +1,23 @@
+body {
+    background-color: #f8f9fa;  /* 背景顏色 */
+}
+
+.navbar {
+    margin-bottom: 20px;  /* 導航欄底部間距 */
+}
+
+.container {
+    padding-top: 20px;  /* 容器頂部填充 */
+}
+
+.form-group {
+    margin-bottom: 15px;  /* 表單組底部間距 */
+}
+
+.btn {
+    margin-top: 10px;  /* 按鈕頂部間距 */
+}
+
+.list-group-item {
+    margin-bottom: 10px;  /* 列表組項目底部間距 */
+}

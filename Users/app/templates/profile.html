@@ -1,0 +1,16 @@
+<!-- filepath: /c:/Users/zoe.lin/Desktop/Web-Projects/flask-projects/Users/app/templates/profile.html -->
+{% extends "base.html" %}
+{% block title %}Profile{% endblock %}
+{% block content %}
+<div class="container">
+  <h1 class="mt-4">個人資料</h1>
+  <div class="card mt-4">
+    <div class="card-body">
+      <p class="card-text"><strong>電話號碼:</strong> {{ user.phone }}</p>
+      <p class="card-text"><strong>簡介:</strong> {{ user.bio }}</p>
+      <p class="card-text"><strong>地址:</strong> {{ user.address }}</p>
+      <a href="{{ url_for('user.edit_profile') }}" class="btn btn-primary">編輯個人資料</a>
+    </div>
+  </div>
+</div>
+{% endblock %}

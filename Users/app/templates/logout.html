@@ -1,0 +1,10 @@
+<!-- filepath: /c:/Users/zoe.lin/Desktop/Web-Projects/flask-projects/Users/app/templates/logout.html -->
+{% extends "base.html" %}
+{% block title %}Logout{% endblock %}
+{% block content %}
+<div class="container">
+  <h1 class="mt-4">登出</h1>
+  <p>您已成功登出。</p>
+  <a href="{{ url_for('user.home') }}" class="btn btn-primary">返回首頁</a>
+</div>
+{% endblock %}
