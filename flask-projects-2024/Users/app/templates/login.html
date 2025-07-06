@@ -1,0 +1,19 @@
+<!-- filepath: /c:/Users/zoe.lin/Desktop/Web-Projects/flask-projects/Users/app/templates/login.html -->
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+{% block content %}
+<div class="container">
+  <h1 class="mt-4">登入</h1>
+  <form method="POST" action="{{ url_for('user.login') }}">
+    <div class="form-group">
+      <label for="email">電子郵件</label>
+      <input type="email" class="form-control" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="password">密碼</label>
+      <input type="password" class="form-control" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn btn-primary">登入</button>
+  </form>
+</div>
+{% endblock %}

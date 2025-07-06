@@ -1,0 +1,27 @@
+<!-- filepath: /c:/Users/zoe.lin/Desktop/Web-Projects/flask-projects/Users/app/templates/register.html -->
+{% extends "base.html" %}
+{% block title %}Register{% endblock %}
+{% block content %}
+<div class="container">
+  <h1 class="mt-4">註冊</h1>
+  <form method="POST" action="{{ url_for('user.register') }}">
+    <div class="form-group">
+      <label for="username">使用者名稱</label>
+      <input type="text" class="form-control" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="email">電子郵件</label>
+      <input type="email" class="form-control" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="password">密碼</label>
+      <input type="password" class="form-control" id="password" name="password" required>
+    </div>
+    <div class="form-group form-check">
+      <input type="checkbox" class="form-check-input" id="is_owner" name="is_owner">
+      <label class="form-check-label" for="is_owner">我是老闆</label>
+    </div>
+    <button type="submit" class="btn btn-primary">註冊</button>
+  </form>
+</div>
+{% endblock %}
